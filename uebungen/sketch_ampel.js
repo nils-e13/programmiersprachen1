@@ -1,19 +1,22 @@
 function setup() {
     createCanvas(200, 200);
 }
-
+//noch variablen hinzufügen evtl
 function draw() {
     rectMode(CENTER);
+    //create traffic light body
     background(0);
     fill('gray');
     rect(100, 100, 50, 100);
-    stroke(0); //creates a black circle for each light
+    //creates a black circle for each light
+    stroke(0);
     strokeWeight(2);
     ellipse(100, 70, 21);
     ellipse(100, 100, 21);
     ellipse(100, 130, 21);
 
-        if (mouseY > 60 && mouseY < 90 && mouseX > 90 && mouseX < 110) { //fills circle with color when mouse is hovered above circle
+    //turn traffic light colors on when mouse is hovered above
+        if (mouseY > 60 && mouseY < 90 && mouseX > 90 && mouseX < 110) {
             fill('red');
             ellipse(100, 70, 20, 20);
         }
