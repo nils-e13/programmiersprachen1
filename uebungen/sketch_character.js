@@ -26,14 +26,14 @@ function draw() {
     //create hair
     fill('#332411');
     beginShape();
-    vertex(120, 120);
-    vertex(280, 120);
-    vertex(280, 180);
-    vertex(260, 180);
-    vertex(260, 160);
-    vertex(140, 160);
-    vertex(140, 180);
-    vertex(120, 180);
+    vertex(x-80, y-80);
+    vertex(x+80, y-80);
+    vertex(x+80, y-20);
+    vertex(x+60, y-20);
+    vertex(x+60, y-40);
+    vertex(x-60, y-40);
+    vertex(x-60, y-20);
+    vertex(x-80, y-20);
     endShape(CLOSE);
 
     //create eyes
@@ -48,22 +48,22 @@ function draw() {
     //create mouth
     fill('#45220e')
     beginShape();
-    vertex(160, 240);
-    vertex(180, 240);
-    vertex(180, 260);
-    vertex(220, 260);
-    vertex(220, 240);
-    vertex(240, 240);
-    vertex(240, 280);
-    vertex(160, 280);
+    vertex(x-40, y+40);
+    vertex(x-20, y+40);
+    vertex(x-20, y+60);
+    vertex(x+20, y+60);
+    vertex(x+20, y+40);
+    vertex(x+40, y+40);
+    vertex(x+40, y+80);
+    vertex(x-40, y+80);
     endShape(CLOSE);
 
     fill('#6a4030')
     beginShape();
-    vertex(180, 220);
-    vertex(220, 220);
-    vertex(220, 240);
-    vertex(180, 240);
+    vertex(x-20, y+20);
+    vertex(x+20, y+20);
+    vertex(x+20, y+40);
+    vertex(x-20, y+40);
     endShape(CLOSE);
 
     //createBody
@@ -87,5 +87,45 @@ function draw() {
     fill('#6b6b6b');
     rect(BodyX+40, BodyY+360, 80, 40);
     rect(BodyX-40, BodyY+360, 80, 40);
+
+    /*//create pattern
+    fill('#009999')
+    let a = 120;
+    let b = 100;
+    let random = Math.floor(Math.random() * 300)+80;
+
+    while (a <= a+80 && b <=b+80) {
+        rect(a, b, 40, 60);
+        a = a + random;
+        b = b + random;
+    } */
+    
+    fill('#007f7f')
+    let random = Math.floor(Math.random() * 40)+35;
+    let a = 130;
+    let b = 300;
+
+    while (a <= 270) {
+        rect(a, b, 20, 40);
+        
+            while (b<= 450) {
+                rect(a,b, 20, 40);
+                b = b+random;
+            }
+        b = 300;
+        a = a+random;
+        
+
+    /*
+    for (let a=130 && let b= 300; a <= Math.floor(Math.random() * 40)+35; a += random);
+        rect(a,b,20,40);
+        {
+        for(let a=130 && let b =300; b<=Math.floor(Math.random() * 40)+35;b+=random):
+        rect(a,b,20,40);
+        }
+        */
+            
+    }
+
     
 }
