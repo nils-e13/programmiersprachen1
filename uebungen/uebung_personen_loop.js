@@ -12,7 +12,6 @@ let randomVorname = ''
 let randomNachname = ''
 
 //Objekte für 3 Personen
-/*
 let person1 = { 
     firstName: randomVorname,
     lastName: randomNachname,
@@ -26,7 +25,7 @@ let person2 = {
 let person3 = {
     firstName: randomVorname,
     lastName: randomNachname,
-}; */
+}; 
 
 // Zufallsgenerator
 function getRandomInt(max) {

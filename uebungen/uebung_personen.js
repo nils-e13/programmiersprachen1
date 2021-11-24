@@ -32,18 +32,6 @@ person3Name = person3.firstName + ' ' + person3.lastName
 
 document.getElementById("demo").innerHTML +=  '<br>' + person1Name + '<br>' + person2Name + '<br>' + person3Name
 
-/*for (i=0; i<=maxRounds; i++) {
-
-    //zufälligen Vornamen wählen
-    randomVorname = Vornamen[getRandomInt(Vornamen.length)]
-
-    //zufälligen Nachnamen wählen
-    randomNachname = Nachnamen[getRandomInt(Nachnamen.length)]
-
-    personName = randomVorname + ' ' + randomNachname
-    document.getElementById("demo").innerHTML +=  '<br>' + personName
-} */
-
 document.getElementById("demo").innerHTML += '<br>'
 
 //if Abfrage gleicher Nachname Verwandschaft
