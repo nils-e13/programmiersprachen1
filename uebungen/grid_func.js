@@ -7,17 +7,24 @@ Erstelle eine Funktion die grid heißt und die drei Parametern hat.
 grid(10, 30, 20); // Erstellt 10 x 30 ellipsen von der size 20px
  */
 
-
+const offset = 20;
 function setup() {
 	createCanvas(800, 300);
 }
 
 function draw() {
 	background(220);
-    grid(5, 30, 20); //function call
+    grid(10, 30, 20); //function call
 }
 //function declaration
 function grid (numX, numY, size) {
-
+	fill(237, 34, 93);
+	noStroke();
+	for (let i = 0; i<=numX; i++){
+		for (let j = 0; j<=numY; j++){
+			ellipse(i+offset, j+offset, size, size);
+			
+		}
+	}
 
 }
