@@ -22,7 +22,7 @@ function grid (numX, numY, size) {
 	noStroke();
 	for (let i = 0; i<numX; i++){
 		for (let j = 0; j<numY; j++){
-			ellipse(i*offset+size, j*offset+size, size, size);
+			circle(i*offset+size, j*offset+size, size);
 			
 		}
 	}
