@@ -8,25 +8,37 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
 
-let randomColor = ''
+/*let randomColor = ''
 let randomSize = ''
 randomColor = colorR[getRandomInt(colorR.length)]
-randomSize = sizeR[getRandomInt(sizeR.length)]
+randomSize = sizeR[getRandomInt(sizeR.length)]*/
 
 function setup() {
     createCanvas(1500, 1500);
 }
 
 /*function mouseClicked() {
-    character(mouseX, mouseY, randomSize, randomColor);
-
+    //character(mouseX, mouseY, randomSize, randomColor);
+    ellipse(mouseX, mouseX, 10, 10);
+    return false;
 
 }*/
+
+//Enter drücken um 3 Freunde zu erstellen
 
 function draw() {
     rectMode(CENTER);
     background(60);
-    character(300, 300, randomSize, randomColor);
+    const offset = 400;
+    //if Enter is clicked
+    
+    for (let i = 0; i < 3; i++) {
+        let randomColor = ''
+        let randomSize = ''
+        randomColor = colorR[getRandomInt(colorR.length)]
+        randomSize = sizeR[getRandomInt(sizeR.length)]
+        character(300+i*offset, 300, randomSize, randomColor);
+    }
 }
 /*
 function mouseClicked() {
@@ -35,14 +47,14 @@ function mouseClicked() {
 }
 console.log(mouseX);
 */
-function character (mouseX, mouseY, size, colorX){
+function character (numX, numY, size, colorX){
     let skincolor = color('#bb8973');
     let eyecolor = color('#ffffff');
     let bodycolor = colorX;
 
 
-    let x = mouseX;
-    let y = mouseY;
+    let x = numX;
+    let y = numY;
     let a = size;
 
     /*
