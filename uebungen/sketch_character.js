@@ -7,7 +7,8 @@ function draw() {
     background('255')
 
     let skincolor = color('#bb8973');
-    let eyecolor = color('#ffffff')
+    let eyecolor = color('#ffffff');
+    let bodycolor = color('#009e9e');
 
     let x = 200;
     let y = 200;
@@ -67,7 +68,7 @@ function draw() {
     endShape(CLOSE);
 
     //createBody
-    fill('#009e9e')
+    fill(bodycolor);
     rect(BodyX, BodyY, 160, 200); //body
 
     //create Arms
