@@ -4,6 +4,11 @@
 const colorR = ['#009e9e', '#cc0099', '#ff9900']
 const sizeR = [70, 80, 100]
 
+let randomColor = ''
+let randomSize = ''
+/*randomColor = colorR[getRandomInt(colorR.length)]
+randomSize = sizeR[getRandomInt(sizeR.length)]*/
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
@@ -15,6 +20,7 @@ randomSize = sizeR[getRandomInt(sizeR.length)]*/
 
 function setup() {
     createCanvas(1500, 1500);
+    noLoop();
 }
 
 /*function mouseClicked() {
@@ -31,14 +37,13 @@ function draw() {
     background(60);
     const offset = 400;
     //if Enter is clicked
-    
-    for (let i = 0; i < 3; i++) {
-        let randomColor = ''
-        let randomSize = ''
+
+    for (let i = 0; i < 3; i++) {  
         randomColor = colorR[getRandomInt(colorR.length)]
         randomSize = sizeR[getRandomInt(sizeR.length)]
         character(300+i*offset, 300, randomSize, randomColor);
-    }
+        
+    } 
 }
 /*
 function mouseClicked() {
