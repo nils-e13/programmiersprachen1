@@ -6,17 +6,10 @@ const sizeR = [70, 80, 100]
 
 let randomColor = ''
 let randomSize = ''
-/*randomColor = colorR[getRandomInt(colorR.length)]
-randomSize = sizeR[getRandomInt(sizeR.length)]*/
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
-
-/*let randomColor = ''
-let randomSize = ''
-randomColor = colorR[getRandomInt(colorR.length)]
-randomSize = sizeR[getRandomInt(sizeR.length)]*/
 
 function setup() {
     createCanvas(1500, 1500);
@@ -30,13 +23,10 @@ function setup() {
 
 }*/
 
-//Enter drücken um 3 Freunde zu erstellen
-
 function draw() {
     rectMode(CENTER);
     background(60);
     const offset = 400;
-    //if Enter is clicked
 
     for (let i = 0; i < 3; i++) {  
         randomColor = colorR[getRandomInt(colorR.length)]
@@ -45,28 +35,15 @@ function draw() {
         
     } 
 }
-/*
-function mouseClicked() {
-    character(mouseX, mouseY, randomSize, randomColor);
-    return false;
-}
-console.log(mouseX);
-*/
+
 function character (numX, numY, size, colorX){
     let skincolor = color('#bb8973');
     let eyecolor = color('#ffffff');
     let bodycolor = colorX;
 
-
     let x = numX;
     let y = numY;
     let a = size;
-
-    /*
-    let x = 200;
-    let y = 200;
-    let a = 80; //size
-    */
 
     BodyX = x;
     BodyY = y+180;
