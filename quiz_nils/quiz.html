@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="quiz.js"></script>
+</head>
+<!--
+<body class = "bodyclass">
+    <div onclick="starteNeueRunde();" class = "questionfield" >
+    <p id="Frage">Wilkommen zum Quiz</p>
+    <p id="Antworten">Klicke hier, um dein Quiz zu starten.</p>
+    </div>
+    
+         
+    <div class = "auswahldiv">
+        <p id="1" class="auswahl"></p>
+        <p id="2" class="auswahl" onclick="tippeButton(this);">2</p>
+        <p id="3" class="auswahl" onclick="tippeButton(this);">3</p>
+    </div>
+
+    <div class = "auswahldiv">  
+    <p class = "nextbutton" onclick="starteNeueRunde();">Nächste Frage</p>
+    </div>
+
+</body>
+-->
+<!--Start Game Page-->
+<body>
+    <div id="home" class="container">
+        <div class="flex-column flex-center">
+            <h1>Are you ready?</h1>
+            <p id="StartBtn" class="btn" onclick="StartGame();">Start Game</p>
+        </div>
+    </div>
+
+    <!--Question 1-->
+    <div id="Question1Page" class="container">
+        <div class="flex-column flex-center">
+            <div id="hud">
+                <div class="hud-item">
+                    <p class="hud-prefix">
+                        Score
+                    </p>
+                    <h2 class="hud-main-text" id="score">
+                        0
+                    </h2>
+                </div>
+            </div>
+            <h2 id="1question">What is the answer to this question?</h2>
+            <div class="choice-container">
+                <p class="choice-prefix">A</p>
+                <p id="1choice1" class="choice-text"></p>
+                
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">B</p>
+                <p id="1choice2"class="choice-text"></p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">C</p>
+                <p id="1choice3" class="choice-text"></p>
+            </div>
+
+            <div class="nextQuestion-container">
+                <p class="nextQuestion-text" onclick="showNextQuestion();">Next Question</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!--
+    <div id="Question2Page" class="container">
+        <div class="flex-column flex-center">
+            <div id="hud">
+                <div class="hud-item">
+                    <p class="hud-prefix">
+                        Score
+                    </p>
+                    <h2 class="hud-main-text" id="score">
+                        0
+                    </h2>
+                </div>
+            </div>
+            <h2 id="2question">What is the answer to this question?</h2>
+            <div class="choice-container">
+                <p class="choice-prefix">A</p>
+                <p id="2choice1" class="choice-text"></p>
+                
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">B</p>
+                <p id="2choice2"class="choice-text"></p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">C</p>
+                <p id="2choice3" class="choice-text"></p>
+            </div>
+
+            <div class="nextQuestion-container">
+                <p class="nextQuestion-text" onclick="showQuestion3();">Next Question</p>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <div id="Question3Page" class="container">
+        <div class="flex-column flex-center">
+            <div id="hud">
+                <div class="hud-item">
+                    <p class="hud-prefix">
+                        Score
+                    </p>
+                    <h2 class="hud-main-text" id="score">
+                        0
+                    </h2>
+                </div>
+            </div>
+            <h2 id="3question">Question 3?</h2>
+            <div class="choice-container">
+                <p class="choice-prefix">A</p>
+                <p id="3choice1" class="choice-text"></p>
+                
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">B</p>
+                <p id="3choice2" class="choice-text"></p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">C</p>
+                <p id="3choice3" class="choice-text"></p>
+            </div>
+
+            <div class="nextQuestion-container">
+                <p class="nextQuestion-text" onclick="showQuestion4();">Next Question</p>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <div id="Question4Page" class="container">
+        <div class="flex-column flex-center">
+            <div id="hud">
+                <div class="hud-item">
+                    <p class="hud-prefix">
+                        Score
+                    </p>
+                    <h2 class="hud-main-text" id="score">
+                        0
+                    </h2>
+                </div>
+            </div>
+            <h2 id="4question">Question 4?</h2>
+            <div class="choice-container">
+                <p class="choice-prefix">A</p>
+                <p id="4choice1" class="choice-text"></p>
+                
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">B</p>
+                <p id="4choice2"class="choice-text"></p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">C</p>
+                <p id="4choice3" class="choice-text"></p>
+            </div>
+
+            <div class="nextQuestion-container">
+                <p class="nextQuestion-text" onclick="showQuestion5();">Next Question</p>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <div id="Question5Page" class="container">
+        <div class="flex-column flex-center">
+            <div id="hud">
+                <div class="hud-item">
+                    <p class="hud-prefix">
+                        Score
+                    </p>
+                    <h2 class="hud-main-text" id="score">
+                        0
+                    </h2>
+                </div>
+            </div>
+            <h2 id="5question">Question5?</h2>
+            <div class="choice-container">
+                <p class="choice-prefix">A</p>
+                <p id="5choice1" class="choice-text"></p>
+                
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">B</p>
+                <p id="5choice2"class="choice-text"></p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">C</p>
+                <p id="5choice3" class="choice-text"></p>
+            </div>
+
+            <div class="nextQuestion-container">
+                <p class="nextQuestion-text" >See results</p>
+            </div>
+
+        </div>
+    </div>-->
+</body>
+</html>

@@ -1,0 +1,219 @@
+
+ /*.bodyclass {
+    background: rgb(255, 255, 255);
+  }
+
+
+.questionfield {
+    font-size:20px;
+    background-color: #c5ee0d; 
+    border-radius: 2px;
+    width: 550px; height: 150px;
+    border: 20px solid #c5ee0d;;
+    margin: 30px auto;
+    text-align: center;
+    box-shadow: 5px 5px 5px grey;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+.auswahldiv {
+    margin: auto; 
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+    }
+
+.auswahl { 
+    background: rgb(231, 231, 231);
+    width: 100px;
+    margin: 20px; 
+    padding: 10px;
+    font-size: 40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: 5px 5px 5px grey;
+    }
+
+.nextbutton {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    font-size: 20px; 
+    margin: 20px; padding: 10px; 
+    background-color: #c5ee0d;
+    border-style: none;
+    box-shadow: 5px 5px 5px grey;
+    }
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Libre+Franklin:wght@100&family=Roboto+Mono:wght@500&display=swap');
+
+:root {
+    background-color: rgb(29, 26, 26);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    font-family: 'Roboto Mono';
+}
+
+h1 {
+    font-size: 5.4rem;
+    color: #fff;
+    margin-bottom: 5rem;
+}
+
+h2 {
+    font-size: 4.2rem;
+    margin-bottom: 4rem;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn {
+    font-size: 2.4rem;
+    padding: 2rem 0;
+    width: 30rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: rgb(28, 26, 26);
+    background: linear-gradient(90deg, rgb(18, 92, 255) 0%, rgb(0, 102, 255) 100%);
+    border-radius: 4px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(8,114,244, 0.6);
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+.hide {
+    display: none;
+}
+
+body {
+    color: #fff;
+}
+
+.choice-container {
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 4px;
+    background: rgb(18, 93, 255);
+    font-size: 3rem;
+    min-width: 80rem;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
+    transform: scale(1.02);
+    transform: transform 100ms;
+}
+
+.choice-prefix {
+    padding: 2rem 2.5rem;
+    color: white;
+}
+
+.choice-text {
+    padding: 2rem;
+    width: 100%;
+}
+
+.correct {
+    background: linear-gradient(32deg, rgba(11, 223, 36) 0%, rgb(41, 232, 111)100%);
+}
+
+.incorrect {
+    background: linear-gradient(32deg, rgba(230, 29, 29, 1) 0%, rgba(224, 11, 11, 1)100%);
+}
+
+/*Next Question Button*/
+.nextQuestion-container {
+    display: flex;
+    margin-bottom: 0.8rem;
+    width:100%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, rgb(212, 206, 17) 0%, rgb(240, 221, 6) 100%);
+    font-size: 3rem;
+    min-width: 80rem;
+}
+
+.nextQuestion-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(255, 247, 9, 0.5);
+    transform: scale(1.02);
+    transform: transform 100ms;
+}
+
+.nextQuestion-text {
+    padding: 2rem;
+    width: 100%;
+    color: black;
+}
+
+/* Heads up Display */
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hud-main-text {
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .choice-container {
+        min-width: 40rem;
+    }
+    .nextQuestion-container {
+        min-width: 40rem;
+    }
+    
+}
