@@ -33,6 +33,7 @@ function draw() {
         randomSize = sizeR[getRandomInt(sizeR.length)]
         character(300+i*offset, 300, randomSize, randomColor);
         
+        
     } 
 }
 
