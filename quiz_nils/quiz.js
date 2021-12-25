@@ -14,19 +14,15 @@ let maxRounds = 5;
 
 //Hides remaining questions
 window.onload = function() {
-    document.getElementById("Question1Page").style.display = 'none';
-    document.getElementById("Question2Page").style.display = 'none';
-    document.getElementById("Question3Page").style.display = 'none';
-    document.getElementById("Question4Page").style.display = 'none';
-    document.getElementById("Question5Page").style.display = 'none';
-  }
+    document.getElementById("QuestionPage").style.display = 'none';
+}
 
 //Displays Questions
 function questionDisplay (question) {
-    document.getElementById("1question").innerHTML = question.question;
-    document.getElementById("1choice1").innerHTML = question.answers[0].choice;
-    document.getElementById("1choice2").innerHTML = question.answers[1].choice;
-    document.getElementById("1choice3").innerHTML = question.answers[2].choice;
+    document.getElementById("question").innerHTML = question.question;
+    document.getElementById("choice1").innerHTML = question.answers[0].choice;
+    document.getElementById("choice2").innerHTML = question.answers[1].choice;
+    document.getElementById("choice3").innerHTML = question.answers[2].choice;
 }
 /*function question2Display (question) {
     document.getElementById("2question").innerHTML = question.question;
@@ -59,7 +55,7 @@ function question5Display (question) {
 function StartGame () {
     questionDisplay(ShuffleFragen[0]);
     document.getElementById("home").style.display = 'none';
-    document.getElementById("Question1Page").style.display = 'block';
+    document.getElementById("QuestionPage").style.display = 'block';
 }
 
 /*function showQuestion2 () {
@@ -73,7 +69,7 @@ function showNextQuestion () {
     questionDisplay(ShuffleFragen[clicks]);
     clicks += 1;
     document.getElementById("home").style.display = 'none';
-    document.getElementById("Question1Page").style.display = 'block';
+    document.getElementById("QuestionPage").style.display = 'block';
 
 }
 /*
