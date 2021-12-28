@@ -151,6 +151,38 @@ body {
     transform: transform 100ms;
 }
 
+.choice-container-green {
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 4px;
+    background: rgb(14, 189, 8);
+    font-size: 3rem;
+    min-width: 80rem;
+}
+.choice-container-green:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 247, 38, 0.5);
+    transform: scale(1.02);
+    transform: transform 100ms;
+}
+
+.choice-container-red {
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 4px;
+    background: rgb(170, 9, 9);
+    font-size: 3rem;
+    min-width: 80rem;
+}
+.choice-container-red:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(247, 6, 6, 0.5);
+    transform: scale(1.02);
+    transform: transform 100ms;
+}
+
 .choice-prefix {
     padding: 2rem 2.5rem;
     color: white;

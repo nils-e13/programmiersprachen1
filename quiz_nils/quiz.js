@@ -58,6 +58,17 @@ function StartGame () {
     document.getElementById("QuestionPage").style.display = 'block';
 }
 
+let score = 0;
+function proofChoice (buttonNumber) {
+    if (ShuffleFragen[clicks].answers[buttonNumber].correct === true) {
+        document.getElementById("choice-button").classList.add('choice-container-green');
+        score++;
+        document.getElementById("score").innerHTML = score;
+    }
+    else if (ShuffleFragen[clicks].answers[buttonNumber].correct === false) {
+        document.getElementById("choice-button").classList.add('choice-container-red');
+    }
+}
 /*function showQuestion2 () {
     question2Display(ShuffleFragen[1]);
     document.getElementById("home").style.display = 'none';
@@ -68,10 +79,15 @@ let clicks = 1;
 function showNextQuestion () {
     questionDisplay(ShuffleFragen[clicks]);
     clicks += 1;
+    document.getElementById("choice-button").classList.remove('choice-container-green');
+    document.getElementById("choice-button").classList.remove('choice-container-red');
     document.getElementById("home").style.display = 'none';
     document.getElementById("QuestionPage").style.display = 'block';
+    
 
 }
+
+
 /*
 function showQuestion3 () {
     question1Display(ShuffleFragen[2]);
@@ -203,7 +219,7 @@ let question4 = {
     question: 'What is the correct way to write a JavaScript array?',
     answers: 
     [
-    {choice: 'car colors = "red", "green", "blue"', correct: false},
+    {choice: 'var colors = "red", "green", "blue"', correct: false},
     {choice: 'const colors = (red, green, blue)', correct: false},
     {choice: 'let colors = ["red", "green", "blue"]', correct: true}
     ]
