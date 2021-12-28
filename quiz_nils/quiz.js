@@ -9,9 +9,6 @@ Um nach einer Eingabe alles zu sperren, damit keine weiteren Antworten Ausgewäh
 */ 
 
 
-let maxRounds = 5;
-
-
 //Hides remaining questions
 window.onload = function() {
     document.getElementById("QuestionPage").style.display = 'none';
@@ -53,39 +50,85 @@ function question5Display (question) {
 
 //Start Game Button (hides Start Page and Displays Question1Page)
 function StartGame () {
-    questionDisplay(ShuffleFragen[0]);
+    showNextQuestion ();
     document.getElementById("home").style.display = 'none';
     document.getElementById("QuestionPage").style.display = 'block';
 }
 
+let questionCount = 0;
+function showNextQuestion () {
+    questionDisplay(ShuffleFragen[questionCount]);
+    questionCount++;
+    document.getElementById("choice-button0").classList.remove('choice-container-green');
+    document.getElementById("choice-button0").classList.remove('choice-container-red');
+    document.getElementById("choice-button1").classList.remove('choice-container-green');
+    document.getElementById("choice-button1").classList.remove('choice-container-red');
+    document.getElementById("choice-button2").classList.remove('choice-container-green');
+    document.getElementById("choice-button2").classList.remove('choice-container-red');
+
+    document.getElementById('choice1').style.pointerEvents = 'auto';
+    document.getElementById('choice2').style.pointerEvents = 'auto';
+    document.getElementById('choice3').style.pointerEvents = 'auto';
+
+    document.getElementById("home").style.display = 'none';
+    document.getElementById("QuestionPage").style.display = 'block';
+    console.log(questionCount);
+}
+
 let score = 0;
-function proofChoice (buttonNumber) {
-    if (ShuffleFragen[clicks].answers[buttonNumber].correct === true) {
-        document.getElementById("choice-button").classList.add('choice-container-green');
+function proofChoice0() {
+    if (ShuffleFragen[questionCount-1].answers[0].correct === true) {
+        document.getElementById("choice-button0").classList.add('choice-container-green');
         score++;
         document.getElementById("score").innerHTML = score;
+        document.getElementById('choice2').style.pointerEvents = 'none';
+        document.getElementById('choice3').style.pointerEvents = 'none';
+        
     }
-    else if (ShuffleFragen[clicks].answers[buttonNumber].correct === false) {
-        document.getElementById("choice-button").classList.add('choice-container-red');
+    else if (ShuffleFragen[questionCount-1].answers[0].correct === false) {
+        document.getElementById("choice-button0").classList.add('choice-container-red');
+        document.getElementById('choice2').style.pointerEvents = 'none';
+        document.getElementById('choice3').style.pointerEvents = 'none';
     }
 }
+function proofChoice1() {
+    if (ShuffleFragen[questionCount-1].answers[1].correct === true) {
+        document.getElementById("choice-button1").classList.add('choice-container-green');
+        score++;
+        document.getElementById("score").innerHTML = score;
+        document.getElementById('choice1').style.pointerEvents = 'none';
+        document.getElementById('choice3').style.pointerEvents = 'none';
+    }
+    else if (ShuffleFragen[questionCount-1].answers[1].correct === false) {
+        document.getElementById("choice-button1").classList.add('choice-container-red');
+        document.getElementById('choice1').style.pointerEvents = 'none';
+        document.getElementById('choice3').style.pointerEvents = 'none';
+    }
+}
+
+function proofChoice2() {
+    if (ShuffleFragen[questionCount-1].answers[2].correct === true) {
+        document.getElementById("choice-button2").classList.add('choice-container-green');
+        score++;
+        document.getElementById("score").innerHTML = score;
+        document.getElementById('choice1').style.pointerEvents = 'none';
+        document.getElementById('choice2').style.pointerEvents = 'none';
+    }
+    else if (ShuffleFragen[questionCount-1].answers[2].correct === false) {
+        document.getElementById("choice-button2").classList.add('choice-container-red');
+        document.getElementById('choice1').style.pointerEvents = 'none';
+        document.getElementById('choice2').style.pointerEvents = 'none';
+    }
+}
+
+
 /*function showQuestion2 () {
     question2Display(ShuffleFragen[1]);
     document.getElementById("home").style.display = 'none';
     document.getElementById("Question1Page").style.display = 'none';
     document.getElementById("Question2Page").style.display = 'block';
 }*/
-let clicks = 1;
-function showNextQuestion () {
-    questionDisplay(ShuffleFragen[clicks]);
-    clicks += 1;
-    document.getElementById("choice-button").classList.remove('choice-container-green');
-    document.getElementById("choice-button").classList.remove('choice-container-red');
-    document.getElementById("home").style.display = 'none';
-    document.getElementById("QuestionPage").style.display = 'block';
-    
 
-}
 
 
 /*
@@ -199,9 +242,9 @@ let question2 = {
     question: 'Inside which HTML element do we put the JavaScript',
     answers: 
     [
-    {choice: '&lt;javascript&gt;', correct: true},
+    {choice: '&lt;javascript&gt;', correct: false},
     {choice: '&lt;js&gt;', correct: false},
-    {choice: '&lt;script&gt;', correct: false}
+    {choice: '&lt;script&gt;', correct: true}
     ]
 }
 
@@ -256,7 +299,7 @@ function shuffle(array) {
     return array;
   }
 
-  const ShuffleFragen = shuffle(Fragen);
+const ShuffleFragen = shuffle(Fragen);
 
 
 
