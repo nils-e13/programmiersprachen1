@@ -17,9 +17,9 @@ window.onload = function() {
 //Displays Questions
 function questionDisplay (question) {
     document.getElementById("question").innerHTML = question.question;
-    document.getElementById("choice1").innerHTML = question.answers[0].choice;
-    document.getElementById("choice2").innerHTML = question.answers[1].choice;
-    document.getElementById("choice3").innerHTML = question.answers[2].choice;
+    document.getElementById("choice1").innerHTML = question.answers[ShuffleAnswerOrder[0]].choice;
+    document.getElementById("choice2").innerHTML = question.answers[ShuffleAnswerOrder[1]].choice;
+    document.getElementById("choice3").innerHTML = question.answers[ShuffleAnswerOrder[2]].choice;
 }
 /*function question2Display (question) {
     document.getElementById("2question").innerHTML = question.question;
@@ -56,8 +56,11 @@ function StartGame () {
 }
 
 let questionCount = 0;
+//function showNextQuestion (NumberofQuizinArray) {}
 function showNextQuestion () {
+    if (questionCount < 5) {
     questionDisplay(ShuffleFragen[questionCount]);
+    //to implement choosing between quizes: questionDisplay(ChooseShuffleFragen[(NumberofQuizinArray)][questionCount])
     questionCount++;
     document.getElementById("choice-button0").classList.remove('choice-container-green');
     document.getElementById("choice-button0").classList.remove('choice-container-red');
@@ -73,11 +76,17 @@ function showNextQuestion () {
     document.getElementById("home").style.display = 'none';
     document.getElementById("QuestionPage").style.display = 'block';
     console.log(questionCount);
+    }
+    else {
+        document.getElementById("QuestionPage").style.display = 'none';
+    }
 }
+
+
 
 let score = 0;
 function proofChoice0() {
-    if (ShuffleFragen[questionCount-1].answers[0].correct === true) {
+    if (ShuffleFragen[questionCount-1].answers[ShuffleAnswerOrder[0]].correct === true) {
         document.getElementById("choice-button0").classList.add('choice-container-green');
         score++;
         document.getElementById("score").innerHTML = score;
@@ -85,21 +94,21 @@ function proofChoice0() {
         document.getElementById('choice3').style.pointerEvents = 'none';
         
     }
-    else if (ShuffleFragen[questionCount-1].answers[0].correct === false) {
+    else if (ShuffleFragen[questionCount-1].answers[ShuffleAnswerOrder[0]].correct === false) {
         document.getElementById("choice-button0").classList.add('choice-container-red');
         document.getElementById('choice2').style.pointerEvents = 'none';
         document.getElementById('choice3').style.pointerEvents = 'none';
     }
 }
 function proofChoice1() {
-    if (ShuffleFragen[questionCount-1].answers[1].correct === true) {
+    if (ShuffleFragen[questionCount-1].answers[ShuffleAnswerOrder[1]].correct === true) {
         document.getElementById("choice-button1").classList.add('choice-container-green');
         score++;
         document.getElementById("score").innerHTML = score;
         document.getElementById('choice1').style.pointerEvents = 'none';
         document.getElementById('choice3').style.pointerEvents = 'none';
     }
-    else if (ShuffleFragen[questionCount-1].answers[1].correct === false) {
+    else if (ShuffleFragen[questionCount-1].answers[ShuffleAnswerOrder[1]].correct === false) {
         document.getElementById("choice-button1").classList.add('choice-container-red');
         document.getElementById('choice1').style.pointerEvents = 'none';
         document.getElementById('choice3').style.pointerEvents = 'none';
@@ -107,14 +116,14 @@ function proofChoice1() {
 }
 
 function proofChoice2() {
-    if (ShuffleFragen[questionCount-1].answers[2].correct === true) {
+    if (ShuffleFragen[questionCount-1].answers[ShuffleAnswerOrder[2]].correct === true) {
         document.getElementById("choice-button2").classList.add('choice-container-green');
         score++;
         document.getElementById("score").innerHTML = score;
         document.getElementById('choice1').style.pointerEvents = 'none';
         document.getElementById('choice2').style.pointerEvents = 'none';
     }
-    else if (ShuffleFragen[questionCount-1].answers[2].correct === false) {
+    else if (ShuffleFragen[questionCount-1].answers[ShuffleAnswerOrder[2]].correct === false) {
         document.getElementById("choice-button2").classList.add('choice-container-red');
         document.getElementById('choice1').style.pointerEvents = 'none';
         document.getElementById('choice2').style.pointerEvents = 'none';
@@ -280,6 +289,8 @@ let question5 = {
 
 
 const Fragen = [question1, question2, question3, question4, question5]
+//for multiple Quizes: const JSFragen = ..., const HTMLFragen = ...
+const AnswerOrder = [0,1,2]
 
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
@@ -300,6 +311,11 @@ function shuffle(array) {
   }
 
 const ShuffleFragen = shuffle(Fragen);
+//to be able to choose between quizes:
+// const ChooseShuffleFragen = [ShuffleFragen, ...ShuffleFragenHTMl, ShuffleFragenCSS]
+// to implement -> ChooseShuffleFragen[0]
+
+const ShuffleAnswerOrder = shuffle(AnswerOrder);
 
 
 
