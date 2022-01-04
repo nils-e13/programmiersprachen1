@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz App</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="quiz.js"></script>
+    <script src="quizV2.js"></script>
 </head>
 <!--Start Game Page-->
 <body>
     <div id="home" class="container">
         <div class="flex-column flex-center">
             <h1>Are you ready?</h1>
-            <p id="StartBtn" class="btn" onclick="StartGame();">Start Game</p>
+            <p id="StartBtn" class="btn" onclick="StartQuiz(0);">Start JS Quiz</p>
+            <p id="StartBtn" class="btn" onclick="StartQuiz(1);">Start HTML Quiz</p>
+            <p id="StartBtn" class="btn" onclick="StartQuiz(2);">Start CSS Quiz</p>
         </div>
     </div>
     <!--Question Page-->
@@ -46,7 +48,22 @@
             <div class="nextQuestion-container">
                 <p class="nextQuestion-text" onclick="showNextQuestion();">Next Question</p>
             </div>
-
+        </div>
+    </div>
+    <!--Final Page-->
+    <div id="EndPage" class="container">
+        <div class="flex-column flex-center">
+            <div id="hud">
+                <div class="hud-item">
+                    <p class="hud-prefix">
+                        Score
+                    </p>
+                    <h2 class="hud-main-text" id="score">
+                        0
+                    </h2>
+                </div>
+            </div>
+            <p id="StartBtn" class="btn" onclick="HomeButton();">Choose a new Quiz</p>
         </div>
     </div>
 </body>
