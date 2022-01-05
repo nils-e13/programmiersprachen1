@@ -1,128 +1,188 @@
 //Creation of variable for each question with answers
 let JSquestion1 = {
-    question: 'How do you create a function in JavaScript?',
+    question: "How do you create a function in JavaScript?",
     answers: 
     [
-    {choice: 'function = myFunction ()', correct: true},
-    {choice: 'function : myFunction ()', correct: false},
-    {choice: 'function = myFunction[]', correct: false}
+    {choice: "function = myFunction ()", correct: true},
+    {choice: "function : myFunction ()", correct: false},
+    {choice: "function = myFunction[]", correct: false}
     ]
 }
 
 let JSquestion2 = {
-    question: 'Inside which HTML element do we put the JavaScript',
+    question: "Inside which HTML element do we put the JavaScript",
     answers: 
     [
-    {choice: '&lt;javascript&gt;', correct: false},
-    {choice: '&lt;js&gt;', correct: false},
-    {choice: '&lt;script&gt;', correct: true}
+    {choice: "&lt;javascript&gt;", correct: false},
+    {choice: "&lt;js&gt;", correct: false},
+    {choice: "&lt;script&gt;", correct: true}
     ]
 }
 
 let JSquestion3 = {
-    question: 'How does a FOR loop start?',
+    question: "How does a FOR loop start?",
     answers: 
     [
-    {choice: 'for(0; i&lt;=5;i++)', correct: false},
-    {choice: 'for(let i = 0;)', correct: false},
-    {choice: 'for loop = (let i= 0; i&lt;5; i++)', correct: true}
+    {choice: "for(0; i&lt;=5;i++)", correct: false},
+    {choice: "for(let i = 0;)", correct: false},
+    {choice: "for loop = (let i= 0; i&lt;5; i++)", correct: true}
     ]
 }
 
 let JSquestion4 = {
-    question: 'What is the correct way to write a JavaScript array?',
+    question: "What is the correct way to write a JavaScript array?",
     answers: 
     [
-    {choice: 'var colors = "red", "green", "blue"', correct: false},
-    {choice: 'const colors = (red, green, blue)', correct: false},
-    {choice: 'let colors = ["red", "green", "blue"]', correct: true}
+    {choice: "var colors = 'red', 'green', 'blue'", correct: false},
+    {choice: "const colors = (red, green, blue)", correct: false},
+    {choice: "let colors = ['red', 'green', 'blue']", correct: true}
     ]
 }
 
 let JSquestion5 = {
-    question: 'Which operator is used to assign a value to a variable?',
+    question: "Which operator is used to assign a value to a variable?",
     answers: 
     [
-    {choice: '-', correct: false},
-    {choice: '=', correct: true},
-    {choice: '*', correct: false}
+    {choice: "-", correct: false},
+    {choice: "=", correct: true},
+    {choice: "*", correct: false}
     ]
 }
 
 let JSquestion6 = {
-    question: 'How do you comment in JavaScript?',
+    question: "How do you comment in JavaScript?",
     answers: 
     [
-    {choice: '&lt;!--comment--&gt;', correct: false},
-    {choice: '//comment', correct: true},
-    {choice: '#comment', correct: false}
+    {choice: "&lt;!--comment--&gt;", correct: false},
+    {choice: "//comment", correct: true},
+    {choice: "#comment", correct: false}
     ]
 }
 
 let JSquestion7 = {
-    question: 'How do you write an object in JavaScript?',
+    question: "How do you write an object in JavaScript?",
     answers: 
     [
-    {choice: '{let object = brand:"Porsche", name:"Taycan"}', correct: false},
-    {choice: 'const car = {brand:"Porsche",name:"Taycan"}', correct: true},
-    {choice: 'const car = [brand:"Porsche", name:"Taycan"]', correct: false}
+    {choice: "{let object = brand:'Porsche', name:'Taycan'}", correct: false},
+    {choice: "const car = {brand:'Porsche',name:'Taycan'}", correct: true},
+    {choice: "const car = [brand:'Porsche', name:'Taycan']", correct: false}
     ]
 }
 
 let HTMLquestion1 = {
-    question: 'Which is the correct HTML element for the largest heading?',
+    question: "Which is the correct HTML element for the largest heading?",
     answers: 
     [
-    {choice: '&lt;h6&gt;', correct: false},
-    {choice: '&lt;h1&gt;', correct: true},
-    {choice: '&lt;heading&gt;', correct: false}
+    {choice: "&lt;h6&gt;", correct: false},
+    {choice: "&lt;h1&gt;", correct: true},
+    {choice: "&lt;heading&gt;", correct: false}
     ]
 }
 
 let HTMLquestion2 = {
-    question: 'What do we write at the beginning of a HTML document?',
+    question: "What do we write at the beginning of a HTML document?",
     answers: 
     [
-    {choice: '&lt;meta charset="utf-8"/&gt;', correct: false},
-    {choice: '&lt;!DOCTYPE html&gt;', correct: true},
-    {choice: '&lt;html&gt;', correct: false}
+    {choice: "&lt;meta charset='utf-8'/&gt;", correct: false},
+    {choice: "&lt;!DOCTYPE html&gt;", correct: true},
+    {choice: "&lt;html&gt;", correct: false}
     ]
 }
 
 let HTMLquestion3 = {
-    question: 'Which character is used to indicate an end tag?',
+    question: "Which character is used to indicate an end tag?",
     answers: 
     [
-    {choice: '&gt;', correct: false},
-    {choice: '/', correct: true},
-    {choice: '&lt;', correct: false}
+    {choice: "&gt;", correct: false},
+    {choice: "/", correct: true},
+    {choice: "&lt;", correct: false}
     ]
 }
 
 let HTMLquestion4 = {
-    question: 'With which tag does an ordered list start?',
+    question: "With which tag does an ordered list start?",
     answers: 
     [
-    {choice: '&lt;ul&gt;', correct: false},
-    {choice: '&lt;ol&gt;', correct: true},
-    {choice: '&lt;li&gt;', correct: false}
+    {choice: "&lt;ul&gt;", correct: false},
+    {choice: "&lt;ol&gt;", correct: true},
+    {choice: "&lt;li&gt;", correct: false}
     ]
 }
 
 let HTMLquestion5 = {
-    question: 'What is the correct HTML for inserting an image?',
+    question: "What is the correct HTML for inserting an image?",
     answers: 
     [
-    {choice: '&lt;img href="image.jpg" alt="Image"&gt;', correct: false},
-    {choice: '&lt;img src="image.jpg" alt="Image"&gt;', correct: true},
-    {choice: '&lt;image src="image.jpg" alt="Image"&gt;', correct: false}
+    {choice: "&lt;img href='image.jpg' alt='Image'&gt;", correct: false},
+    {choice: "&lt;img src='image.jpg' alt='Image'&gt;", correct: true},
+    {choice: "&lt;image src='image.jpg' alt='Image'&gt;", correct: false}
+    ]
+}
+
+let CSSquestion1 = {
+    question: "What is the correct HTML for referring to an external style sheet?",
+    answers: 
+    [
+    {choice: "&lt;link rel='stylesheet' href='mystyle.css'&gt;", correct: true},
+    {choice: "&lt;style src='mystyle.css'&gt;", correct: false},
+    {choice: "&lt;stylesheet&gt;mystyle.css&lt;/stylesheet&gt;", correct: false}
+    ]
+}
+
+let CSSquestion2 = {
+    question: "Where in an HTML document is the correct place to refer to an external style sheet?",
+    answers: 
+    [
+    {choice: "At the end of the document", correct: false},
+    {choice: "In the &lt;head&gt; section", correct: true},
+    {choice: "In the &lt;body&gt; section", correct: false}
+    ]
+}
+
+let CSSquestion3 = {
+    question: "Which property is used to change the font of an element?",
+    answers: 
+    [
+    {choice: "font-style", correct: false},
+    {choice: "font-family", correct: true},
+    {choice: "font-weight", correct: false}
+    ]
+}
+
+let CSSquestion4 = {
+    question: "How do you make the text bold?",
+    answers: 
+    [
+    {choice: "font:bold;", correct: false},
+    {choice: "font-weight:bold;", correct: true},
+    {choice: "style:bold;", correct: false}
+    ]
+}
+
+let CSSquestion5 = {
+    question: "How do you select an element with id 'demo'?",
+    answers: 
+    [
+    {choice: ".demo", correct: false},
+    {choice: "#demo", correct: true},
+    {choice: "*demo;", correct: false}
+    ]
+}
+
+let CSSquestion6 = {
+    question: "How do you select an element with class 'demo'?",
+    answers: 
+    [
+    {choice: ".demo", correct: true},
+    {choice: "#demo", correct: false},
+    {choice: "*demo;", correct: false}
     ]
 }
 
 //Array for set of questions
 const JSFragen = [JSquestion1, JSquestion2, JSquestion3, JSquestion4, JSquestion5, JSquestion6, JSquestion7];
-const HTMLFragen = [HTMLquestion1, HTMLquestion2, HTMLquestion3, HTMLquestion4, HTMLquestion5]
-const CSSFragen = []
+const HTMLFragen = [HTMLquestion1, HTMLquestion2, HTMLquestion3, HTMLquestion4, HTMLquestion5];
+const CSSFragen = [CSSquestion1, CSSquestion2, CSSquestion3, CSSquestion4, CSSquestion5, CSSquestion6];
 //for multiple Quizes: const JSFragen = ..., const HTMLFragen = ...
 
 //Array for normal order of Choices so it can be shuffled for a random display of choices each time
@@ -162,8 +222,8 @@ const ShuffleAnswerOrder = shuffle(AnswerOrder);
 
 //Hides Question Page on page load
 window.onload = function() {
-    document.getElementById("QuestionPage").style.display = 'none';
-    document.getElementById("EndPage").style.display = 'none';
+    document.getElementById("QuestionPage").style.display = "none";
+    document.getElementById("EndPage").style.display = "none";
 }
 
 //Start Game Button (hides Start Page and Displays Question1Page)
@@ -172,8 +232,8 @@ let NumberofQuizinArrayPublic = null;
 function StartQuiz (NumberQuiz) {
     NumberofQuizinArrayPublic = NumberQuiz;
     showNextQuestion ();
-    document.getElementById("home").style.display = 'none';
-    document.getElementById("QuestionPage").style.display = 'block';
+    document.getElementById("home").style.display = "none";
+    document.getElementById("QuestionPage").style.display = "block";
 }
 
 //Displays Questions
@@ -191,25 +251,25 @@ function showNextQuestion () {
     questionDisplay(ChooseShuffleFragen[NumberofQuizinArrayPublic][questionCount]);
     //to implement choosing between quizes: questionDisplay(ChooseShuffleFragen[(NumberofQuizinArray)][questionCount])
     questionCount++;
-    document.getElementById("choice-button0").classList.remove('choice-container-green');
-    document.getElementById("choice-button0").classList.remove('choice-container-red');
-    document.getElementById("choice-button1").classList.remove('choice-container-green');
-    document.getElementById("choice-button1").classList.remove('choice-container-red');
-    document.getElementById("choice-button2").classList.remove('choice-container-green');
-    document.getElementById("choice-button2").classList.remove('choice-container-red');
+    document.getElementById("choice-button0").classList.remove("choice-container-green");
+    document.getElementById("choice-button0").classList.remove("choice-container-red");
+    document.getElementById("choice-button1").classList.remove("choice-container-green");
+    document.getElementById("choice-button1").classList.remove("choice-container-red");
+    document.getElementById("choice-button2").classList.remove("choice-container-green");
+    document.getElementById("choice-button2").classList.remove("choice-container-red");
 
-    document.getElementById('choice1').style.pointerEvents = 'auto';
-    document.getElementById('choice2').style.pointerEvents = 'auto';
-    document.getElementById('choice3').style.pointerEvents = 'auto';
+    document.getElementById("choice1").style.pointerEvents = "auto";
+    document.getElementById("choice2").style.pointerEvents = "auto";
+    document.getElementById("choice3").style.pointerEvents = "auto";
 
-    document.getElementById("home").style.display = 'none';
-    document.getElementById("QuestionPage").style.display = 'block';
+    document.getElementById("home").style.display = "none";
+    document.getElementById("QuestionPage").style.display = "block";
     }
     else {
         document.getElementById("scoreFinal").innerHTML = score;
         //questionCount = 0;
-        document.getElementById("QuestionPage").style.display = 'none';
-        document.getElementById("EndPage").style.display = 'block';
+        document.getElementById("QuestionPage").style.display = "none";
+        document.getElementById("EndPage").style.display = "block";
         console.log(score);
     }
 }
@@ -218,59 +278,57 @@ let score = 0;
 //Checks Quiz Answer for Option A
 function proofChoice0() {
     if (ChooseShuffleFragen[NumberofQuizinArrayPublic][questionCount-1].answers[ShuffleAnswerOrder[0]].correct === true) {
-        document.getElementById("choice-button0").classList.add('choice-container-green');
+        document.getElementById("choice-button0").classList.add("choice-container-green");
         score++;
         document.getElementById("score").innerHTML = score;
-        document.getElementById('choice2').style.pointerEvents = 'none';
-        document.getElementById('choice3').style.pointerEvents = 'none';
+        document.getElementById("choice2").style.pointerEvents = "none";
+        document.getElementById("choice3").style.pointerEvents = "none";
     }
     else if (ChooseShuffleFragen[NumberofQuizinArrayPublic][questionCount-1].answers[ShuffleAnswerOrder[0]].correct === false) {
-        document.getElementById("choice-button0").classList.add('choice-container-red');
-        document.getElementById('choice2').style.pointerEvents = 'none';
-        document.getElementById('choice3').style.pointerEvents = 'none';
+        document.getElementById("choice-button0").classList.add("choice-container-red");
+        document.getElementById("choice2").style.pointerEvents = "none";
+        document.getElementById("choice3").style.pointerEvents = "none";
     }
 }
 
 //Checks Quiz Answer for Option B
 function proofChoice1() {
     if (ChooseShuffleFragen[NumberofQuizinArrayPublic][questionCount-1].answers[ShuffleAnswerOrder[1]].correct === true) {
-        document.getElementById("choice-button1").classList.add('choice-container-green');
+        document.getElementById("choice-button1").classList.add("choice-container-green");
         score++;
         document.getElementById("score").innerHTML = score;
-        document.getElementById('choice1').style.pointerEvents = 'none';
-        document.getElementById('choice3').style.pointerEvents = 'none';
+        document.getElementById("choice1").style.pointerEvents = "none";
+        document.getElementById("choice3").style.pointerEvents = "none";
     }
     else if (ChooseShuffleFragen[NumberofQuizinArrayPublic][questionCount-1].answers[ShuffleAnswerOrder[1]].correct === false) {
-        document.getElementById("choice-button1").classList.add('choice-container-red');
-        document.getElementById('choice1').style.pointerEvents = 'none';
-        document.getElementById('choice3').style.pointerEvents = 'none';
+        document.getElementById("choice-button1").classList.add("choice-container-red");
+        document.getElementById("choice1").style.pointerEvents = "none";
+        document.getElementById("choice3").style.pointerEvents = "none";
     }
 }
 
 //Checks Quiz Answer for Option C
 function proofChoice2() {
     if (ChooseShuffleFragen[NumberofQuizinArrayPublic][questionCount-1].answers[ShuffleAnswerOrder[2]].correct === true) {
-        document.getElementById("choice-button2").classList.add('choice-container-green');
+        document.getElementById("choice-button2").classList.add("choice-container-green");
         score++;
         document.getElementById("score").innerHTML = score;
-        document.getElementById('choice1').style.pointerEvents = 'none';
-        document.getElementById('choice2').style.pointerEvents = 'none';
+        document.getElementById("choice1").style.pointerEvents = "none";
+        document.getElementById("choice2").style.pointerEvents = "none";
     }
     else if (ChooseShuffleFragen[NumberofQuizinArrayPublic][questionCount-1].answers[ShuffleAnswerOrder[2]].correct === false) {
-        document.getElementById("choice-button2").classList.add('choice-container-red');
-        document.getElementById('choice1').style.pointerEvents = 'none';
-        document.getElementById('choice2').style.pointerEvents = 'none';
+        document.getElementById("choice-button2").classList.add("choice-container-red");
+        document.getElementById("choice1").style.pointerEvents = "none";
+        document.getElementById("choice2").style.pointerEvents = "none";
     }
 }
 
 //Button to get to Start Page to choose a new Quiz
 function HomeButton() {
-    document.getElementById("home").style.display = 'block';
-    document.getElementById("EndPage").style.display = 'none';
+    document.getElementById("home").style.display = "block";
+    document.getElementById("EndPage").style.display = "none";
     questionCount = 0;
     score = 0;
     document.getElementById("score").innerHTML = score;
     
 }
-
-//Button to restart current Quiz
