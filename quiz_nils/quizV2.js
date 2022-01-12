@@ -11,7 +11,7 @@ let JSquestion1 = {
 }
 
 let JSquestion2 = {
-    question: "Inside which HTML element do we put the JavaScript",
+    question: "Inside which HTML element do we put the JavaScript?",
     answers: 
     [
     {choice: "&lt;javascript&gt;", correct: false},
@@ -250,7 +250,7 @@ function questionDisplay (question) {
 let questionCount = 0;
 //function showNextQuestion (NumberofQuizinArray) {}
 function showNextQuestion () {
-    //startConfetti ();
+    startConfetti ();
     if (questionCount < 5) {
     questionDisplay(ChooseShuffleFragen[NumberofQuizinArrayPublic][questionCount]);
     //to implement choosing between quizes: questionDisplay(ChooseShuffleFragen[(NumberofQuizinArray)][questionCount])
@@ -284,7 +284,7 @@ function blockChoices () {
 }
 
 let score = 0;
-//let maxScore = 5;
+let maxScore = 5;
 //Checks Quiz Answer for Option A
 function proofChoice0() {
     if (ChooseShuffleFragen[NumberofQuizinArrayPublic][questionCount-1].answers[ShuffleAnswerOrder[0]].correct === true) {
@@ -331,6 +331,7 @@ function proofChoice2() {
 function HomeButton() {
     document.getElementById("home").style.display = "block";
     document.getElementById("EndPage").style.display = "none";
+    document.getElementById("YourFinalScore").innerHTML = "Your Final Score";
     questionCount = 0;
     score = 0;
     document.getElementById("score").innerHTML = score;
@@ -338,7 +339,7 @@ function HomeButton() {
 
 //starts confetti animation and displays "Highscore!" if maxScore is reached
 function startConfetti () {
-    if(score === 5) {
+    if(score === maxScore) {
     const start = () => {
         setTimeout(function() {
             confetti.start()

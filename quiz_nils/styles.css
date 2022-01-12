@@ -16,11 +16,26 @@ h1 {
     font-size: 5.4rem;
     color: #fff;
     margin-bottom: 5rem;
+    text-align:center;
 }
 
 h2 {
     font-size: 4.2rem;
     margin-bottom: 4rem;
+    text-align:center;
+    width: 80%;
+    max-width: 80rem;
+}
+
+h3 {
+    font-size: 4.2rem;
+    margin-bottom: 4rem;
+    text-align:center;
+}
+
+img {
+    width: 40%;
+    min-width: 35rem;
 }
 
 .container {
@@ -43,6 +58,7 @@ h2 {
     margin: 0 auto;
     padding: 2rem;
     margin-top: 20rem;
+    
 }
 
 .container-StartPage {
@@ -53,7 +69,7 @@ h2 {
     max-height: 80rem;
     margin: 0 auto;
     padding: 2rem;
-    margin-top: 20rem;
+    margin-top: 0rem;
 }
 
 .flex-column {
@@ -85,26 +101,14 @@ h2 {
     text-align: center;
     margin-bottom: 1rem;
     text-decoration: none;
-    color: rgb(28, 26, 26);
-    background: linear-gradient(90deg, rgb(18, 92, 255) 0%, rgb(0, 102, 255) 100%);
-    border-radius: 4px;
-}
-
-.btn-start {
-    font-size: 2.4rem;
-    padding: 2rem 0;
-    width: 30rem;
-    text-align: center;
-    margin-bottom: 1rem;
-    text-decoration: none;
-    color: rgb(28, 26, 26);
-    background: linear-gradient(90deg, rgb(18, 92, 255) 0%, rgb(0, 102, 255) 100%);
+    color: rgb(255, 255, 255);
+    background: linear-gradient(90deg, #6c3975 0%, #4c2b80 100%);
     border-radius: 4px;
 }
 
 .btn:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(8,114,244, 0.6);
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(69, 40, 148, 0.6);
     transition: transform 150ms;
     transform: scale(1.03);
 }
@@ -126,16 +130,17 @@ body {
 .choice-container {
     display: flex;
     margin-bottom: 0.8rem;
-    width: 100%;
+    width: 80%;
     border-radius: 4px;
-    background: rgb(18, 93, 255);
+    background: linear-gradient(90deg, #7f398d 0%, #732583 100%);
     font-size: 3rem;
     min-width: 80rem;
+    max-width: 80rem;
 }
 
 .choice-container:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(169, 81, 219, 0.5);
     transform: scale(1.02);
     transform: transform 100ms;
 }
@@ -145,13 +150,13 @@ body {
     margin-bottom: 0.8rem;
     width: 100%;
     border-radius: 4px;
-    background: rgb(14, 189, 8);
+    background: rgb(22, 175, 47);
     font-size: 3rem;
     min-width: 80rem;
 }
 .choice-container-green:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 247, 38, 0.5);
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 247, 98, 0.5);
     transform: scale(1.02);
     transform: transform 100ms;
 }
@@ -161,13 +166,13 @@ body {
     margin-bottom: 0.8rem;
     width: 100%;
     border-radius: 4px;
-    background: rgb(170, 9, 9);
+    background: #d61226;
     font-size: 3rem;
     min-width: 80rem;
 }
 .choice-container-red:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(247, 6, 6, 0.5);
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(247, 6, 46, 0.5);
     transform: scale(1.02);
     transform: transform 100ms;
 }
@@ -179,31 +184,24 @@ body {
 
 .choice-text {
     padding: 2rem;
-    width: 100%;
-}
-
-.correct {
-    background: linear-gradient(32deg, rgba(11, 223, 36) 0%, rgb(41, 232, 111)100%);
-}
-
-.incorrect {
-    background: linear-gradient(32deg, rgba(230, 29, 29, 1) 0%, rgba(224, 11, 11, 1)100%);
+    width: 80%;
 }
 
 /*Next Question Button*/
 .nextQuestion-container {
     display: flex;
     margin-bottom: 0.8rem;
-    width:100%;
+    width:80%;
     border-radius: 4px;
-    background: linear-gradient(90deg, rgb(212, 206, 17) 0%, rgb(240, 221, 6) 100%);
+    background: linear-gradient(90deg, #422969 0%, #31145f 100%);
     font-size: 3rem;
     min-width: 80rem;
+    max-width: 80rem;
 }
 
 .nextQuestion-container:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(255, 247, 9, 0.5);
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(60, 19, 107, 0.5);
     transform: scale(1.02);
     transform: transform 100ms;
 }
@@ -211,7 +209,7 @@ body {
 .nextQuestion-text {
     padding: 2rem;
     width: 100%;
-    color: black;
+    color: #fff;
 }
 
 /* Heads up Display */
