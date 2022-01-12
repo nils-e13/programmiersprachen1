@@ -7,13 +7,14 @@
     <title>Quiz App</title>
     <link rel="stylesheet" href="styles.css">
     <script src="quizV2.js"></script>
+    <script src="confetti.js"></script>
 </head>
 <!--Start Game Page-->
 <body>
-    <div id="home" class="container">
+    <div id="home" class="container-StartPage">
         <div class="flex-column flex-center">
             <h1>Are you ready?</h1>
-            <p id="StartBtn" class="btn" onclick="StartQuiz(0);">Start JS Quiz</p>
+            <p id="StartBtn" class="btn" onclick="StartQuiz(0);">Start JavaScript Quiz</p>
             <p id="StartBtn" class="btn" onclick="StartQuiz(1);">Start HTML Quiz</p>
             <p id="StartBtn" class="btn" onclick="StartQuiz(2);">Start CSS Quiz</p>
         </div>
@@ -52,11 +53,11 @@
         </div>
     </div>
     <!--Final Page-->
-    <div id="EndPage" class="container">
+    <div id="EndPage" class="container-EndPage">
         <div class="flex-column flex-center">
             <div id="hud">
                 <div class="hud-item">
-                    <p class="hud-prefix">
+                    <p class="hud-prefix" id="YourFinalScore">
                         Your Final Score
                     </p>
                     <h1 class="hud-main-text" id="scoreFinal">

@@ -1,4 +1,5 @@
 //Creation of variable for each question with answers
+//JS Questions
 let JSquestion1 = {
     question: "How do you create a function in JavaScript?",
     answers: 
@@ -68,7 +69,7 @@ let JSquestion7 = {
     {choice: "const car = [brand:'Porsche', name:'Taycan']", correct: false}
     ]
 }
-
+//HTML questions
 let HTMLquestion1 = {
     question: "Which is the correct HTML element for the largest heading?",
     answers: 
@@ -118,7 +119,7 @@ let HTMLquestion5 = {
     {choice: "&lt;image src='image.jpg' alt='Image'&gt;", correct: false}
     ]
 }
-
+//CSS questions
 let CSSquestion1 = {
     question: "What is the correct HTML for referring to an external style sheet?",
     answers: 
@@ -211,14 +212,11 @@ const Shuffle_JSFragen = shuffle(JSFragen);
 const Shuffle_HTMLFragen = shuffle(HTMLFragen);
 const Shuffle_CSSFragen = shuffle(CSSFragen);
 
-const ChooseShuffleFragen = [Shuffle_JSFragen, Shuffle_HTMLFragen, Shuffle_CSSFragen];
-//to be able to choose between quizes:
-// const ChooseShuffleFragen = [ShuffleFragen, ...ShuffleFragenHTMl, ShuffleFragenCSS]
-// to implement -> ChooseShuffleFragen[0]
-
 //shuffles order of choices
 const ShuffleAnswerOrder = shuffle(AnswerOrder);
 
+//Array to Choose correct FragenSet with StartQuiz();
+const ChooseShuffleFragen = [Shuffle_JSFragen, Shuffle_HTMLFragen, Shuffle_CSSFragen];
 
 //Hides Question Page on page load
 window.onload = function() {
@@ -229,13 +227,18 @@ window.onload = function() {
 //Start Game Button (hides Start Page and Displays Question1Page)
 let NumberofQuizinArrayPublic = null;
 
+//Starts correct Quiz with HTML onclick
 function StartQuiz (NumberQuiz) {
+    //ReShuffles Fragen on Game Restart
+    shuffle(JSFragen);
+    shuffle(HTMLFragen);
+    shuffle(CSSFragen);
+
     NumberofQuizinArrayPublic = NumberQuiz;
     showNextQuestion ();
     document.getElementById("home").style.display = "none";
     document.getElementById("QuestionPage").style.display = "block";
 }
-
 //Displays Questions
 function questionDisplay (question) {
     document.getElementById("question").innerHTML = question.question;
@@ -247,6 +250,7 @@ function questionDisplay (question) {
 let questionCount = 0;
 //function showNextQuestion (NumberofQuizinArray) {}
 function showNextQuestion () {
+    //startConfetti ();
     if (questionCount < 5) {
     questionDisplay(ChooseShuffleFragen[NumberofQuizinArrayPublic][questionCount]);
     //to implement choosing between quizes: questionDisplay(ChooseShuffleFragen[(NumberofQuizinArray)][questionCount])
@@ -270,24 +274,28 @@ function showNextQuestion () {
         //questionCount = 0;
         document.getElementById("QuestionPage").style.display = "none";
         document.getElementById("EndPage").style.display = "block";
-        console.log(score);
     }
+}
+//blocks other choice selection if one choice is submitted
+function blockChoices () {
+    document.getElementById("choice1").style.pointerEvents = "none";
+    document.getElementById("choice2").style.pointerEvents = "none";
+    document.getElementById("choice3").style.pointerEvents = "none";
 }
 
 let score = 0;
+//let maxScore = 5;
 //Checks Quiz Answer for Option A
 function proofChoice0() {
     if (ChooseShuffleFragen[NumberofQuizinArrayPublic][questionCount-1].answers[ShuffleAnswerOrder[0]].correct === true) {
         document.getElementById("choice-button0").classList.add("choice-container-green");
         score++;
         document.getElementById("score").innerHTML = score;
-        document.getElementById("choice2").style.pointerEvents = "none";
-        document.getElementById("choice3").style.pointerEvents = "none";
+        blockChoices ();
     }
     else if (ChooseShuffleFragen[NumberofQuizinArrayPublic][questionCount-1].answers[ShuffleAnswerOrder[0]].correct === false) {
         document.getElementById("choice-button0").classList.add("choice-container-red");
-        document.getElementById("choice2").style.pointerEvents = "none";
-        document.getElementById("choice3").style.pointerEvents = "none";
+        blockChoices ();
     }
 }
 
@@ -297,13 +305,11 @@ function proofChoice1() {
         document.getElementById("choice-button1").classList.add("choice-container-green");
         score++;
         document.getElementById("score").innerHTML = score;
-        document.getElementById("choice1").style.pointerEvents = "none";
-        document.getElementById("choice3").style.pointerEvents = "none";
+        blockChoices ();
     }
     else if (ChooseShuffleFragen[NumberofQuizinArrayPublic][questionCount-1].answers[ShuffleAnswerOrder[1]].correct === false) {
         document.getElementById("choice-button1").classList.add("choice-container-red");
-        document.getElementById("choice1").style.pointerEvents = "none";
-        document.getElementById("choice3").style.pointerEvents = "none";
+        blockChoices ();
     }
 }
 
@@ -313,13 +319,11 @@ function proofChoice2() {
         document.getElementById("choice-button2").classList.add("choice-container-green");
         score++;
         document.getElementById("score").innerHTML = score;
-        document.getElementById("choice1").style.pointerEvents = "none";
-        document.getElementById("choice2").style.pointerEvents = "none";
+        blockChoices ();
     }
     else if (ChooseShuffleFragen[NumberofQuizinArrayPublic][questionCount-1].answers[ShuffleAnswerOrder[2]].correct === false) {
         document.getElementById("choice-button2").classList.add("choice-container-red");
-        document.getElementById("choice1").style.pointerEvents = "none";
-        document.getElementById("choice2").style.pointerEvents = "none";
+        blockChoices ();
     }
 }
 
@@ -330,5 +334,25 @@ function HomeButton() {
     questionCount = 0;
     score = 0;
     document.getElementById("score").innerHTML = score;
+}
+
+//starts confetti animation and displays "Highscore!" if maxScore is reached
+function startConfetti () {
+    if(score === 5) {
+    const start = () => {
+        setTimeout(function() {
+            confetti.start()
+        }, 1000);
+    };
     
+    const stop = () => {
+        setTimeout(function() {
+            confetti.stop()
+        }, 5000);
+    };
+    start();
+    stop();
+    //change Final Score Text to Highscore
+    document.getElementById("YourFinalScore").innerHTML = "Highscore!";
+}
 }
