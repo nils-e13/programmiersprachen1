@@ -371,20 +371,12 @@ function HomeButton() {
 //starts confetti animation and displays "Highscore!" if maxScore is reached
 function startConfetti () {
     if(score === maxScore) {
-    const start = () => {
-        setTimeout(function() {
-            confetti.start()
-        }, 1000);
-    };
-    
-    const stop = () => {
-        setTimeout(function() {
-            confetti.stop()
-        }, 5000);
-    };
-    start();
-    stop();
-    //change Final Score Text to Highscore
+        confetti({
+            particleCount: 200,
+            spread: 100,
+            gravity: 0.8
+          });
+          //change Final Score Text to Highscore
     document.getElementById("YourFinalScore").innerHTML = "Highscore!";
-}
+    };
 }
